@@ -15,12 +15,33 @@
 
 """
 
-def main():
+def mine(Line1, Line2,):
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    Status=100
+    if isinstance(Line1, str) and isinstance(Line2, str):
+        pass
+    else:
+        Status=0
+    if  len(Line1)==len(Line2): 
+         Status=1                    
+    elif len(Line1) > len(Line2):
+        Status=2       
+    else:
+        Status=0
+    if Line2.endswith("learn") and len(Line1) != len(Line2):        
+         Status=3    
+    else:
+         pass
+    return Status
     
 if __name__ == "__main__":
-    main()
+   Line1="I am go to do it"
+   Line2="I want to learn"
+   Status1=mine(Line1, Line2)
+   print(Status1)
+
+
+   
