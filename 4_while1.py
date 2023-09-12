@@ -14,7 +14,12 @@ def hello_user():
     """
     Замените pass на ваш код
     """
-    pass
+     hay = input ("Как дела?"  )
+    while hay.lower() != "хорошо":
+          hay = input ("Как дела?"  )
+    else:
+        print ("Я очень рад")
+
 
     
 if __name__ == "__main__":
